@@ -1,0 +1,62 @@
+.container {
+  display: block;
+  border: solid 2px var(--bs-blue);
+  border-radius: 3%;
+  width: 50% !important;
+  -webkit-animation: "hello-world" 3s forwards;
+}
+.display-2 {
+  display: block;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  text-align: center;
+  color: var(--bs-blue);
+  font-weight: 500 !important;
+  -webkit-animation: "hello-world" 3s forwards;
+}
+.justify-content-evenly {
+  margin-bottom: 20%;
+  margin-top: 10%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.align-items-center {
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.btn {
+  display: block;
+  -webkit-animation: "hello-world" 3s forwards;
+}
+.btn-lg {
+  padding: 0.75rem 1rem !important;
+  font-size: 1.5rem !important;
+  border-radius: 0.4rem !important;
+}
+form {
+  margin: 10%;
+}
+.mb-3 {
+  margin-bottom: 2%;
+}
+.input-group {
+  margin-bottom: 5%;
+}
+input {
+  -webkit-animation: "hello-world" 3s forwards;
+}
+span {
+  -webkit-animation: "hello-world" 3s forwards;
+}
+@keyframes hello-world {
+  0% {
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+  }
+}
