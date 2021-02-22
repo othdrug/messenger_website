@@ -12,11 +12,13 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Messenger</a>
               <a class="nav-link dropdown-toggle" href="#" id="navbarMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{ current_user.name }}
+                NAME: {{ current_user.name }}
+                ID: {{ current_user.id }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarMenuLink">
-              <li><a class="dropdown-item" href="#">Find friends</a></li>
               <li><a class="dropdown-item" href="#">Friends</a></li>
+              <li><a class="dropdown-item" href="#">Friend requests </a></li>
+              <li><a class="dropdown-item" href="#">Find friends</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{{ '/logout' }}">Log Out</a></li>
