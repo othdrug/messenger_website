@@ -1,5 +1,5 @@
-from flask import Flask, render_template, redirect
-from flask_login import LoginManager, login_user, logout_user, login_required
+from flask import Flask, render_template, redirect, url_for
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
@@ -17,6 +17,8 @@ login_manager.init_app(app)
 @app.route('/')
 @app.route('/index')
 def index():
+    if current_user.is_authenticated:
+        return redirect('/message')
     return render_template('index.html')
 
 
@@ -36,6 +38,8 @@ class RegisterForm(FlaskForm):
 @app.route('/registration', methods=["GET", "POST"])
 def reg():
     form = RegisterForm()
+    if current_user.is_authenticated:
+        return redirect('/message')
     if form.validate_on_submit():
         if len(form.name.data) < 5 or len(form.name.data) > 20:  # проверка на длину имени
             return render_template('reg.html', form=form, message='Длина имени может быть от 5 до 20 символов')
@@ -71,6 +75,8 @@ def load_user(user_id):
 @app.route('/login', methods=["GET", "POST"])
 def login():
     form = LoginForm()
+    if current_user.is_authenticated:
+        return redirect('/message')
     if form.validate_on_submit():
         session = db_session.create_session()
         user = session.query(User).filter(User.name == form.name.data).first()
@@ -90,8 +96,6 @@ class Main(FlaskForm):
 @app.route('/message', methods=["GET", "POST"])
 def message():
     form = Main()
-    if form.validate_on_submit():
-        return redirect('/logout')
     return render_template('message.html', form=form)
 
 
