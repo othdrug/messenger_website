@@ -89,14 +89,9 @@ def login():
     return render_template('login.html', title='Авторизация', form=form)
 
 
-class Main(FlaskForm):
-    log_out = SubmitField('Log out')
-
-
 @app.route('/message', methods=["GET", "POST"])
 def message():
-    form = Main()
-    return render_template('message.html', form=form)
+    return render_template('message.html')
 
 
 @app.route('/friends')
