@@ -110,3 +110,5 @@ def logout():
 db_session.global_init("db/messengers.sqlite")
 if __name__ == "__main__":
     app.run(debug=True)
+
+print(1)
