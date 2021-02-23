@@ -91,7 +91,9 @@ def login():
 
 @app.route('/message', methods=["GET", "POST"])
 def message():
-    return render_template('message.html')
+    if current_user.is_authenticated:
+        return render_template('message.html')
+    return redirect('/index')
 
 
 @app.route('/friends')
