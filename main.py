@@ -93,7 +93,8 @@ def login():
 def message():
     if current_user.is_authenticated:
         return render_template('message.html')
-    return redirect('/index')
+    else:
+        return redirect('/index')
 
 
 @app.route('/friends')
