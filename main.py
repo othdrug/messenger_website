@@ -99,7 +99,10 @@ def message():
 
 @app.route('/friends')
 def friends():
-    return render_template('friends.html')
+    if current_user.is_authenticated:
+        return render_template('friends.html')
+    else:
+        return redirect('/index')
 
 
 @app.route('/logout')
