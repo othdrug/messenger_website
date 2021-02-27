@@ -6,14 +6,31 @@
 <title>Друзья</title>
 {% endblock %}
 {% block body %}
-<h1>Friends</h1>
+<header>
+    <nav class="navbar navbar-dark bg-primary"><div class="container-fluid">
+        <a class="navbar-brand" href="/message">Messenger</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            NAME: {{ current_user.name }}
+            ID: {{ current_user.id }}
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarMenuLink">
+            <li><a class="dropdown-item" href="/friends">Friends</a></li>
+            <li><a class="dropdown-item" href="#">Friend requests </a></li>
+            <li><a class="dropdown-item" href="#">Find friends</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ '/logout' }}">Log Out</a></li>
+        </ul>
+    </div>
+    </nav>
+</header>
 <div class="row fre">
-
     <div class="col col-4">
+        <div class="container searchf">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Find friends..." aria-label="Find friends" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-        </div>
+        </div></div>
 
         <ul class="list-group-flush first_list">
             <li class="list-group-item">Вова<a class="icons" href="#"><i class="fas fa-user-plus"></i></a></li>
@@ -22,8 +39,10 @@
     </div>
 
     <div class="col col-5">
+        <h3>Friends</h3>
         <ul class="list-group-flush second_list">
             <li class="list-group-item">Костя<a class="icons" href="#"><i class="fas fa-envelope"></i></a><a class="icons" href="#"><i class="fas fa-user-minus"></i></a></li>
+            <li class="list-group-item">Рената<a class="icons" href="#"><i class="fas fa-envelope"></i></a><a class="icons" href="#"><i class="fas fa-user-minus"></i></a></li>
         </ul>
     </div>
 

@@ -42,7 +42,7 @@ html, body {
   outline: 0;
   box-shadow: none !important;
 }
-.input-group {
+.msg-field {
   align-items: center !important;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -202,16 +202,17 @@ h1 {
 }
 .first_list {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
-  height: 89.70%;
+  height: 90%;
 }
 .second_list {
-  height: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  height: 90%;
 }
 .third_list {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   height: 90%;
 }
-h4 {
+h4, h3 {
   height: 10%;
   margin: 0;
   padding-top: 1rem;
@@ -220,4 +221,11 @@ h4 {
 .icons {
   float: right;
   margin-left: 1rem;
+}
+.mb-3 {
+  margin: 0 !important;
+}
+.searchf {
+  height: 10%;
+  padding: 1rem
 }
