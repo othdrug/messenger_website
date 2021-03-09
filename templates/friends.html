@@ -15,9 +15,7 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarMenuLink">
             <li><a class="dropdown-item" href="/friends">Friends</a></li>
-            <li><a class="dropdown-item" href="#">Friend requests </a></li>
-            <li><a class="dropdown-item" href="#">Find friends</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" data-bs-toggle="collapse" href="#Collapsible" role="button" aria-expanded="false" aria-controls="Collapsible">Settings</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="{{ '/logout' }}">Log Out</a></li>
         </ul>
@@ -39,7 +37,7 @@
     </div>
 
     <div class="col col-5">
-        <h3>Friends</h3>
+        <h3 class="h3">Friends</h3>
         <ul class="list-group-flush second_list">
             <li class="list-group-item">Костя<a class="icons" href="#"><i class="fas fa-envelope"></i></a><a class="icons" href="#"><i class="fas fa-user-minus"></i></a></li>
             <li class="list-group-item">Рената<a class="icons" href="#"><i class="fas fa-envelope"></i></a><a class="icons" href="#"><i class="fas fa-user-minus"></i></a></li>
@@ -47,10 +45,46 @@
     </div>
 
     <div class="col">
-        <h4>Requests</h4>
+        <h4 class="h4">Requests</h4>
         <ul class="list-group-flush third_list">
             <li class="list-group-item">Сава<a class="icons" href="#"><i class="fas fa-user-check"></i></a></li>
         </ul>
     </div>
 </div>
+<div class="settings container collapse" id="Collapsible">
+        <div class="setHeader container">
+            <h3>Settings</h3>
+            <button class="btn-close" id="btnClose" data-bs-toggle="collapse" data-bs-target="#Collapsible" role="button" aria-expanded="false" aria-controls="Collapsible"></button>
+        </div>
+        <div class="setForm container">
+            <form id="settings" action="" method="POST">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="text" class="form-control set-form" placeholder="Change username" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control set-form" placeholder="Current password" id="CurrentPassword">
+                    <p class="alert alert-danger" role="alert">
+                        Error
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control set-form" placeholder="New password" id="NewPassword">
+                    <p class="alert alert-danger" role="alert">
+                        Error
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control set-form" placeholder="Repeat new password" id="NewPasswordAgain">
+                    <p class="alert alert-danger" role="alert">
+                        Error
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <p class="text-danger" id="error_enter">
+                    Message
+                </p>
+            </form>
+        </div>
+    </div>
 {% endblock %}

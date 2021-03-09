@@ -1,9 +1,9 @@
 .container {
   display: block;
   border: solid 2px var(--bs-blue);
-  border-radius: 3%;
+  border-radius: 25px;
   width: 50% !important;
-  -webkit-animation: "hello-world" 3s forwards;
+  -webkit-animation: "hello-world" 1s forwards;
 }
 .display-2 {
   display: block;
@@ -12,7 +12,7 @@
   text-align: center;
   color: var(--bs-blue);
   font-weight: 500 !important;
-  -webkit-animation: "hello-world" 3s forwards;
+  -webkit-animation: "hello-world" 1s forwards;
 }
 .justify-content-evenly {
   margin-bottom: 20%;
@@ -31,7 +31,7 @@ body {
 }
 .btn {
   display: block;
-  -webkit-animation: "hello-world" 3s forwards;
+  -webkit-animation: "hello-world" 1s forwards;
 }
 .btn-lg {
   padding: 0.75rem 1rem !important;
@@ -48,15 +48,16 @@ form {
   margin-bottom: 5%;
 }
 input {
-  -webkit-animation: "hello-world" 3s forwards;
+  -webkit-animation: "hello-world" 1s forwards;
 }
 span {
-  -webkit-animation: "hello-world" 3s forwards;
+  -webkit-animation: "hello-world" 1s forwards;
 }
 @keyframes hello-world {
   0% {
-    background-color: transparent;
-    color: transparent;
-    border-color: transparent;
+    opacity: 0;
   }
+}
+h1 {
+  margin-bottom: 5%;
 }

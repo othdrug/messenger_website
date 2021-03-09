@@ -1796,9 +1796,7 @@
 
       var dimension = this._getDimension();
 
-      this._element.classList.remove(CLASS_NAME_COLLAPSE);
 
-      this._element.classList.add(CLASS_NAME_COLLAPSING);
 
       this._element.style[dimension] = 0;
 

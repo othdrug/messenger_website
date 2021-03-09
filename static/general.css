@@ -2,6 +2,7 @@
 html, body {
   height: 100%;
   overflow: auto;
+  animation: hello-world 1s forwards;
 }
 .row {
   margin-top: 1% !important;
@@ -72,7 +73,7 @@ html, body {
   height: auto !important;
   margin-bottom: 1rem;
 }
-p {
+.txt {
   white-space: pre-line;
   margin: 0;
   overflow-wrap: break-word;
@@ -104,9 +105,11 @@ p {
   padding: 0;
 }
 .list-group-item {
+  align-items: center;
   border-right: 0px;
   border-top: 0px;
   background-color: transparent;
+  display: flex;
 }
 .list-group-item:first-child {
   border-top-right-radius: 0 !important;
@@ -121,11 +124,18 @@ p {
   display: block;
 }
 #navbarMenuLink {
-  color: white !important;
+  color: white;
+}
+.dropdown-toggle.show {
+  background: #fff;
+  color: #212529 !important;
 }
 #navbarMenuLink:hover {
-  color: white !important;
+  background: #fff;
+  color: #212529;
+  transition: all 0.35s ease;
 }
+
 .badge {
   float: right;
 }
@@ -212,7 +222,7 @@ h1 {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   height: 90%;
 }
-h4, h3 {
+.h4, .h3 {
   height: 10%;
   margin: 0;
   padding-top: 1rem;
@@ -228,4 +238,65 @@ h4, h3 {
 .searchf {
   height: 10%;
   padding: 1rem
+}
+.settings {
+  height: calc(100% - 6rem);
+  margin-bottom: 1rem;
+  width: 42%;
+  position: absolute;
+  left: 29%;
+  top: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  z-index: 3;
+  background-color: #fff;
+}
+#btnClose {
+  margin-left: auto;
+}
+.setHeader {
+  background-color: transparent;
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  height: 8%;
+}
+.setHeader h3 {
+  margin: 0;
+  margin-left: 3%;
+  margin-top: 1rem;
+}
+.setForm {
+  height: 92%;
+  padding: 1rem 5%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+p.alert {
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5rem 1rem
+}
+.set-form, #addon-wrapping, .mb-3, .btn-primary, .text-danger {
+  margin: 0.5rem 0;
+}
+.navbar {
+  display: flex;
+  padding: 0 0.5rem;
+}
+.navbar-brand {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.nav-link {
+  padding: 1rem;
+}
+.rounded-pill {
+  margin-left: auto;
+}
+
+
+@keyframes hello-world {
+  0% {
+    opacity: 0;
+  }
 }
