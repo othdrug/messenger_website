@@ -106,8 +106,9 @@ html, body {
 }
 .list-group-item {
   align-items: center;
-  border-right: 0px;
-  border-top: 0px;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
   background-color: transparent;
   display: flex;
 }
@@ -240,12 +241,12 @@ h1 {
   padding: 1rem
 }
 .settings {
-  height: calc(100% - 6rem);
+  height: auto;
   margin-bottom: 1rem;
   width: 42%;
   position: absolute;
   left: 29%;
-  top: 5rem;
+  top: 8rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   z-index: 3;
@@ -272,11 +273,14 @@ h1 {
   overflow-y: auto;
   scrollbar-width: thin;
 }
+.setInput {
+  margin-bottom: 1rem !important;
+}
 p.alert {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem 0 0 0;
   padding: 0.5rem 1rem
 }
-.set-form, #addon-wrapping, .mb-3, .btn-primary, .text-danger {
+.btn-primary, .text-danger {
   margin: 0.5rem 0;
 }
 .navbar {
@@ -294,6 +298,11 @@ p.alert {
   margin-left: auto;
 }
 
+#wrapper {
+  padding: 0 7rem;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 @keyframes hello-world {
   0% {

@@ -22,7 +22,7 @@
               </ul>
       </nav>
     </header>
-<div class="row">
+<div class="row" id="wrapper">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action" id="list-profile4-list" data-bs-toggle="list" href="#list-profile4" role="tab" aria-controls="profile4">profile4<span class="badge bg-dark rounded-pill">4</span></a>
@@ -170,23 +170,28 @@
         </div>
         <div class="setForm container">
             <form id="settings" action="" method="POST">
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping">@</span>
-                    <input type="text" class="form-control set-form" placeholder="Change username" aria-label="Username" aria-describedby="addon-wrapping">
+                <div class="setInput mb-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control set-form" placeholder="Change username" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <p class="alert alert-danger" role="alert">
+                        Error
+                    </p>
                 </div>
-                <div class="mb-3">
+                <div class="setInput mb-3">
                     <input type="password" class="form-control set-form" placeholder="Current password" id="CurrentPassword">
                     <p class="alert alert-danger" role="alert">
                         Error
                     </p>
                 </div>
-                <div class="mb-3">
+                <div class="setInput mb-3">
                     <input type="password" class="form-control set-form" placeholder="New password" id="NewPassword">
                     <p class="alert alert-danger" role="alert">
                         Error
                     </p>
                 </div>
-                <div class="mb-3">
+                <div class="setInput mb-3">
                     <input type="password" class="form-control set-form" placeholder="Repeat new password" id="NewPasswordAgain">
                     <p class="alert alert-danger" role="alert">
                         Error
